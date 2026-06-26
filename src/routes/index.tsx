@@ -46,12 +46,23 @@ function HomePage() {
               Sin registro, sin límites, sin pagos.
             </p>
 
-            <button
-              onClick={() => navigate({ to: '/simulacro' })}
-              className="inline-flex items-center justify-center bg-gray-900 text-white rounded-xl px-8 py-4 text-[15px] font-medium hover:bg-gray-700 transition-colors"
-            >
-              Comenzar simulacro →
-            </button>
+            {/* Modos */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mt-2">
+              <button
+                onClick={() => navigate({ to: '/simulacro' })}
+                className="inline-flex flex-col items-center bg-gray-900 text-white rounded-2xl px-7 py-4 hover:bg-gray-700 transition-colors"
+              >
+                <span className="text-[15px] font-medium">🎯 Simulacro oficial</span>
+                <span className="text-xs text-gray-400 mt-0.5">35 preguntas · 45 min · como el examen real</span>
+              </button>
+              <button
+                onClick={() => navigate({ to: '/repaso' })}
+                className="inline-flex flex-col items-center bg-purple-600 text-white rounded-2xl px-7 py-4 hover:bg-purple-700 transition-colors"
+              >
+                <span className="text-[15px] font-medium">⚡ Repaso Extremo</span>
+                <span className="text-xs text-purple-200 mt-0.5">Todas las preguntas · corrección al instante</span>
+              </button>
+            </div>
 
             {!user && (
               <p className="mt-4 text-sm text-gray-400">

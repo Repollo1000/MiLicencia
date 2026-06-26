@@ -1,23 +1,2 @@
 @import "tailwindcss";
 
-@theme {
-  --color-brand: #1D9E75;
-  --color-brand-dark: #0F6E56;
-  --color-brand-light: #E1F5EE;
-  --color-danger: #D85A30;
-  --color-danger-light: #FAECE7;
-  --font-sans: 'Inter', system-ui, sans-serif;
-}
-
-@layer base {
-  *, *::before, *::after { box-sizing: border-box; }
-
-  body {
-    font-family: var(--font-sans);
-    -webkit-font-smoothing: antialiased;
-    background: #fff;
-    color: #111;
-  }
-
-  button { cursor: pointer; font-family: inherit; }
-}
