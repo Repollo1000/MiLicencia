@@ -1,5 +1,5 @@
-import type { QuestionOption, QuestionWithOptions } from '@/types'
-import type { useRepaso } from '@/hooks/useRepaso'
+import type { QuestionOption, QuestionWithOptions } from '../types'
+import type { useRepaso } from '../hooks/useRepaso'
 
 const LETTERS = ['A', 'B', 'C', 'D']
 

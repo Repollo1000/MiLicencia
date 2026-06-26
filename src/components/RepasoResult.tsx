@@ -1,4 +1,4 @@
-import type { Answer } from '@/types'
+import type { Answer } from '../types'
 
 type Props = {
   correct: number

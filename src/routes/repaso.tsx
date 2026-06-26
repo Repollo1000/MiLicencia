@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
-import { useRepaso } from '@/hooks/useRepaso'
-import { RepasoQuiz } from '@/components/RepasoQuiz'
-import { RepasoResult } from '@/components/RepasoResult'
+import { useRepaso } from '../hooks/useRepaso'
+import { RepasoQuiz } from '../components/RepasoQuiz'
+import { RepasoResult } from '../components/RepasoResult'
 
 export const Route = createFileRoute('/repaso')({
   component: RepasoPage,

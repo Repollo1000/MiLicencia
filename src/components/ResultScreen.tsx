@@ -1,4 +1,4 @@
-import type { SimulacroResult } from '@/types'
+import type { SimulacroResult } from '../types'
 
 const MIN_SCORE = 33
 

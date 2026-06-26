@@ -1,5 +1,5 @@
-import type { QuestionOption, QuestionWithOptions } from '@/types'
-import type { useSimulacro } from '@/hooks/useSimulacro'
+import type { QuestionOption, QuestionWithOptions } from '../types'
+import type { useSimulacro } from '../hooks/useSimulacro'
 
 const LETTERS = ['A', 'B', 'C', 'D']
 
