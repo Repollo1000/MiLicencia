@@ -62,6 +62,13 @@ function HomePage() {
                 <span className="text-[15px] font-medium">⚡ Repaso Extremo</span>
                 <span className="text-xs text-purple-200 mt-0.5">Todas las preguntas · corrección al instante</span>
               </button>
+              <button
+                onClick={() => navigate({ to: '/topico' })}
+                className="inline-flex flex-col items-center bg-blue-600 text-white rounded-2xl px-7 py-4 hover:bg-blue-700 transition-colors"
+              >
+                <span className="text-[15px] font-medium">📖 Por tópico</span>
+                <span className="text-xs text-blue-200 mt-0.5">9 capítulos del libro CONASET</span>
+              </button>
             </div>
 
             {!user && (

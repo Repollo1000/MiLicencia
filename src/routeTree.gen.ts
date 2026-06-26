@@ -9,10 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TopicoRouteImport } from './routes/topico'
 import { Route as SimulacroRouteImport } from './routes/simulacro'
 import { Route as RepasoRouteImport } from './routes/repaso'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TopicoRoute = TopicoRouteImport.update({
+  id: '/topico',
+  path: '/topico',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SimulacroRoute = SimulacroRouteImport.update({
   id: '/simulacro',
   path: '/simulacro',
@@ -33,34 +39,45 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/repaso': typeof RepasoRoute
   '/simulacro': typeof SimulacroRoute
+  '/topico': typeof TopicoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/repaso': typeof RepasoRoute
   '/simulacro': typeof SimulacroRoute
+  '/topico': typeof TopicoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/repaso': typeof RepasoRoute
   '/simulacro': typeof SimulacroRoute
+  '/topico': typeof TopicoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/repaso' | '/simulacro'
+  fullPaths: '/' | '/repaso' | '/simulacro' | '/topico'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/repaso' | '/simulacro'
-  id: '__root__' | '/' | '/repaso' | '/simulacro'
+  to: '/' | '/repaso' | '/simulacro' | '/topico'
+  id: '__root__' | '/' | '/repaso' | '/simulacro' | '/topico'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   RepasoRoute: typeof RepasoRoute
   SimulacroRoute: typeof SimulacroRoute
+  TopicoRoute: typeof TopicoRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/topico': {
+      id: '/topico'
+      path: '/topico'
+      fullPath: '/topico'
+      preLoaderRoute: typeof TopicoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/simulacro': {
       id: '/simulacro'
       path: '/simulacro'
@@ -89,6 +106,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   RepasoRoute: RepasoRoute,
   SimulacroRoute: SimulacroRoute,
+  TopicoRoute: TopicoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
