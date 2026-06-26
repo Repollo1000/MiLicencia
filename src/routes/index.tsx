@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
-import { Navbar } from '@/components/Navbar'
-import { AuthModal } from '@/components/AuthModal'
-import { useAuth } from '@/hooks/useAuth'
+import { Navbar } from '../components/Navbar'
+import { AuthModal } from '../components/AuthModal'
+import { useAuth } from '../hooks/useAuth'
 
 export const Route = createFileRoute('/')({
   component: HomePage,

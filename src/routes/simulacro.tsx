@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
-import { useSimulacro } from '@/hooks/useSimulacro'
-import { Quiz } from '@/components/Quiz'
-import { ResultScreen } from '@/components/ResultScreen'
+import { useSimulacro } from '../hooks/useSimulacro'
+import { Quiz } from '../components/Quiz'
+import { ResultScreen } from '../components/ResultScreen'
 
 export const Route = createFileRoute('/simulacro')({
   component: SimulacroPage,
