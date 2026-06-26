@@ -100,7 +100,7 @@ export function Quiz({ sim, onExit }: Props) {
 
         {/* Opciones */}
         <div className="flex flex-col gap-2.5">
-          {question.question_options.map((opt, i) => (
+          {(question.question_options as QuestionOption[]).map((opt: QuestionOption, i: number) => (
             <button
               key={opt.id}
               className={getOptionStyle(opt)}
